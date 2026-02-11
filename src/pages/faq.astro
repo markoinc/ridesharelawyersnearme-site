@@ -1,0 +1,108 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+
+const faqs = [
+  {
+    question: "What should I do immediately after a rideshare accident?",
+    answer: "Call 911 and seek medical attention. Document everything with photos. Most importantly, screenshot your ride receipt from the Uber or Lyft app — this proves the driver was on duty and determines which company's insurance applies. Get the driver's information, collect witness contacts, and file a police report. Don't give statements to insurance companies before consulting an attorney."
+  },
+  {
+    question: "How do I determine which rideshare app my driver was using?",
+    answer: "Check your phone for the ride receipt — it will show whether you booked through Uber or Lyft. If you were hit by a rideshare driver (not as a passenger), look for the trade dress: Uber drivers display the Uber logo, while Lyft drivers typically have the Lyft amp or emblem. Your attorney can also subpoena records from both companies."
+  },
+  {
+    question: "Are Uber and Lyft insurance policies the same?",
+    answer: "Both provide similar $1 million coverage during active trips, but there are differences in their 'Period 1' coverage (when the app is on but no ride is matched). Uber and Lyft also have different claims processes and adjusters. The core protection is similar, but an experienced rideshare attorney knows the nuances of each."
+  },
+  {
+    question: "What about newer rideshare apps like Alto, Empower, or Via?",
+    answer: "Newer rideshare companies typically carry similar insurance requirements as Uber and Lyft — most states mandate $1 million coverage during active trips. However, these smaller companies may have different claims processes. The same legal principles apply: document your ride, seek medical attention, and consult an attorney."
+  },
+  {
+    question: "How does rideshare insurance work when the driver is between rides?",
+    answer: "This is the most complex coverage situation. When a driver's app is on but they haven't accepted a ride ('Period 1'), both Uber and Lyft provide limited liability coverage — typically around $50K. This is much less than the $1 million available during active trips, which is why these cases require careful legal analysis."
+  },
+  {
+    question: "Can I choose whether to file against Uber or Lyft's insurance?",
+    answer: "You file against the insurance of whichever company the driver was working for at the time of the accident. If a driver was running both apps simultaneously (which violates both companies' policies), this creates additional liability questions that work in your favor."
+  },
+  {
+    question: "I was a rideshare passenger — how strong is my case?",
+    answer: "Very strong. As a passenger, you bear zero fault regardless of who caused the accident. Whether your driver, another motorist, or road conditions caused the crash, you have multiple paths to compensation through various insurance policies."
+  },
+  {
+    question: "What if another car hit my Uber or Lyft?",
+    answer: "You can pursue a claim against the at-fault driver's insurance. If they're uninsured or underinsured, the rideshare company's UM/UIM coverage kicks in — both Uber and Lyft provide up to $1 million in uninsured motorist protection during active trips."
+  },
+  {
+    question: "How much does it cost to hire a rideshare accident lawyer?",
+    answer: "Most rideshare accident attorneys work on contingency, meaning you pay nothing upfront and no fees unless you win. The typical fee is 33-40% of your settlement. This arrangement ensures everyone can access quality legal representation regardless of finances."
+  },
+  {
+    question: "Should I report the accident to both Uber and Lyft?",
+    answer: "Report to the app you were using at the time of the accident. Both companies have in-app reporting features. However, be careful what you say — these reports go to insurance adjusters. It's often best to consult an attorney before making detailed statements."
+  },
+  {
+    question: "What compensation can I receive from a rideshare accident claim?",
+    answer: "You may recover medical expenses (past and future), lost wages, pain and suffering, property damage, emotional distress, and loss of earning capacity. The $1 million coverage available during active rides can accommodate even serious injury claims."
+  },
+  {
+    question: "How long do rideshare accident cases typically take?",
+    answer: "Most cases settle within 6-18 months. Cases with clear liability and moderate injuries often resolve faster. Complex cases involving severe injuries, disputed fault, or coverage disputes between multiple insurance companies may take longer. An attorney can estimate your timeline after reviewing the specifics."
+  }
+];
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+};
+---
+
+<BaseLayout 
+  title="Rideshare Accident FAQ | Uber & Lyft Crash Claim Questions"
+  description="Frequently asked questions about Uber and Lyft accident claims, rideshare insurance coverage, comparing platforms, and your legal rights."
+  schema={faqSchema}
+>
+  <section class="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6">Rideshare Accident FAQ</h1>
+      <p class="text-xl text-gray-200">
+        Get answers to common questions about Uber and Lyft accident claims and your legal rights.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4">
+      <div class="space-y-6">
+        {faqs.map((faq, index) => (
+          <div class="bg-gray-50 rounded-xl p-6 hover:shadow-lg transition">
+            <h2 class="text-lg font-bold text-primary mb-3 flex items-start gap-3">
+              <span class="bg-secondary text-white w-8 h-8 rounded-full flex items-center justify-center text-sm flex-shrink-0">
+                {index + 1}
+              </span>
+              {faq.question}
+            </h2>
+            <p class="text-gray-600 ml-11">{faq.answer}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Still Have Questions?</h2>
+      <LeadForm source="faq-page" title="Get Personalized Answers" subtitle="Speak with an experienced rideshare accident attorney who can answer your specific questions." />
+    </div>
+  </section>
+</BaseLayout>

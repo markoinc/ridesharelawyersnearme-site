@@ -1,0 +1,370 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import { states, getTopRideshareMarkets, getOneYearSOLStates, getContributoryNegligenceStates } from '../data/states';
+import { getTopMarkets } from '../data/cities';
+
+const topMarkets = getTopMarkets(10);
+const urgentStates = getOneYearSOLStates();
+const cnStates = getContributoryNegligenceStates();
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Rideshare Lawyers Near Me",
+  "url": "https://ridesharelawyersnearme.com",
+  "description": "Find experienced rideshare accident lawyers nationwide. Free case evaluation for rideshare injury claims.",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://ridesharelawyersnearme.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+};
+---
+
+<BaseLayout 
+  title="Rideshare Accident Lawyers Near You" 
+  description="Injured in a rideshare accident? Find experienced rideshare accident lawyers near you. Free case evaluation. No fees unless you win."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-primary via-primary-light to-primary text-white py-16 md:py-24">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <div>
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            Injured in a <span class="text-secondary">Rideshare Accident</span>?
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-300 mb-8">
+            Get the compensation you deserve. Connect with experienced rideshare accident attorneys who fight for victims like you.
+          </p>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <span class="text-2xl">✓</span>
+              <span>Free Case Review</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <span class="text-2xl">✓</span>
+              <span>No Win, No Fee</span>
+            </div>
+            <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+              <span class="text-2xl">✓</span>
+              <span>24/7 Availability</span>
+            </div>
+          </div>
+          </div>
+        <div>
+          <LeadForm source="homepage-hero" title="Start Your Free Case Review" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section class="py-12 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div class="bg-white p-6 rounded-xl shadow">
+          <div class="text-4xl font-bold text-secondary mb-2">12B+</div>
+          <div class="text-gray-600">Rideshare Trips Annually (Uber + Lyft)</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <div class="text-4xl font-bold text-secondary mb-2">$1M</div>
+          <div class="text-gray-600">Insurance Coverage (During Trip)</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <div class="text-4xl font-bold text-secondary mb-2">97%</div>
+          <div class="text-gray-600">Cases Settled Out of Court</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl shadow">
+          <div class="text-4xl font-bold text-secondary mb-2">150+</div>
+          <div class="text-gray-600">Cities We Cover</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Uber Insurance Works -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">How Rideshare Insurance Coverage Works</h2>
+      <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+        Rideshare insurance coverage (Uber, Lyft) depends on the driver's status at the time of the accident
+      </p>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-50 p-8 rounded-xl border-t-4 border-gray-400">
+          <div class="text-5xl mb-4">📱</div>
+          <h3 class="text-xl font-bold mb-2">Period 1: App On, Waiting</h3>
+          <div class="text-3xl font-bold text-gray-600 mb-4">$50K/$100K</div>
+          <p class="text-gray-600">
+            Driver has app on but no ride request. Limited coverage from rideshare companies: $50,000 per person, $100,000 per accident for injuries.
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 p-8 rounded-xl border-t-4 border-secondary">
+          <div class="text-5xl mb-4">🚗</div>
+          <h3 class="text-xl font-bold mb-2">Period 2: En Route to Pickup</h3>
+          <div class="text-3xl font-bold text-secondary mb-4">$1M</div>
+          <p class="text-gray-600">
+            Driver accepted a ride and is heading to pick up the passenger. Full $1 million liability coverage kicks in.
+          </p>
+        </div>
+        
+        <div class="bg-gray-50 p-8 rounded-xl border-t-4 border-accent-green">
+          <div class="text-5xl mb-4">👥</div>
+          <h3 class="text-xl font-bold mb-2">Period 3: Passenger in Vehicle</h3>
+          <div class="text-3xl font-bold text-accent-green mb-4">$1M</div>
+          <p class="text-gray-600">
+            Passenger is in the vehicle. Maximum coverage: $1 million liability plus uninsured/underinsured motorist coverage.
+          </p>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center">
+        <a href="/resources/rideshare-insurance-coverage/" class="text-secondary font-semibold hover:underline">
+          Learn more about rideshare insurance coverage →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who Can File a Claim -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Who Can File a Rideshare Accident Claim?</h2>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">🚕</div>
+          <h3 class="text-xl font-bold mb-2">Rideshare Passengers</h3>
+          <p class="text-gray-300">Injured while riding in an Uber or Lyft? You're protected by rideshare companies' $1 million insurance policy during your trip.</p>
+        </div>
+        
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">🚙</div>
+          <h3 class="text-xl font-bold mb-2">Other Drivers</h3>
+          <p class="text-gray-300">Hit by a rideshare driver? You can file a claim against both the driver and the rideshare company's commercial insurance.</p>
+        </div>
+        
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">🚶</div>
+          <h3 class="text-xl font-bold mb-2">Pedestrians</h3>
+          <p class="text-gray-300">Struck by a rideshare vehicle while walking? You may have a claim against the driver and Uber.</p>
+        </div>
+        
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">🚴</div>
+          <h3 class="text-xl font-bold mb-2">Cyclists</h3>
+          <p class="text-gray-300">Hit by a rideshare while cycling? Bike accident victims often suffer serious injuries and deserve compensation.</p>
+        </div>
+        
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">👤</div>
+          <h3 class="text-xl font-bold mb-2">Rideshare Drivers</h3>
+          <p class="text-gray-300">Uber drivers injured on the job may have claims against other drivers or through the rideshare company's coverage.</p>
+        </div>
+        
+        <div class="bg-white/10 p-6 rounded-xl">
+          <div class="text-4xl mb-4">👨‍👩‍👧</div>
+          <h3 class="text-xl font-bold mb-2">Family Members</h3>
+          <p class="text-gray-300">Lost a loved one in a rideshare accident? Families can file wrongful death claims for compensation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Urgent: Short Statute States -->
+  <section class="py-16 bg-red-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="bg-red-100 border-l-4 border-red-500 p-6 rounded-r-xl mb-8">
+        <h2 class="text-2xl font-bold text-red-800 mb-2">⚠️ Act Fast: 1-Year Statute of Limitations</h2>
+        <p class="text-red-700">
+          If your accident occurred in Louisiana or Tennessee, you have only <strong>ONE YEAR</strong> to file a claim. Don't wait!
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        {urgentStates.map(state => (
+          <a href={`/states/${state.slug}/`} class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition flex items-center gap-4">
+            <div class="text-4xl">⏰</div>
+            <div>
+              <h3 class="font-bold text-lg">{state.name}</h3>
+              <p class="text-red-600 font-semibold">Only 1 year to file your claim!</p>
+            </div>
+          </a>
+        ))}
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/resources/statute-of-limitations/" class="text-secondary font-semibold hover:underline">
+          View all state deadlines →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Top Uber Markets -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Top Rideshare Markets We Serve</h2>
+      <p class="text-gray-600 text-center mb-12">Find experienced rideshare accident lawyers in major cities</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+        {topMarkets.map(city => (
+          <a href={`/cities/${city.slug}/`} class="bg-gray-50 p-4 rounded-xl hover:bg-secondary hover:text-white transition group">
+            <h3 class="font-bold">{city.name}</h3>
+            <p class="text-sm text-gray-500 group-hover:text-white/80">{city.stateAbbr}</p>
+          </a>
+        ))}
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/cities/" class="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary-dark transition inline-block">
+          View All Cities →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find by State -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Find Lawyers by State</h2>
+      
+      <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
+        {states.map(state => (
+          <a href={`/states/${state.slug}/`} class="bg-white p-3 rounded-lg shadow hover:shadow-md hover:bg-secondary hover:text-white transition text-center">
+            <span class="font-medium">{state.abbr}</span>
+          </a>
+        ))}
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/states/" class="text-secondary font-semibold hover:underline">
+          Browse all states with detailed laws →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Accident Scenarios -->
+  <section class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Common Rideshare Accident Scenarios</h2>
+      <p class="text-gray-600 text-center mb-12">We handle all types of rideshare accident claims</p>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <a href="/case-types/rideshare-passenger-accident/" class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🚕</div>
+          <h3 class="font-bold mb-2">Passenger Injuries</h3>
+          <p class="text-gray-600 text-sm">Injured while riding in an Uber or Lyft vehicle</p>
+        </a>
+        
+        <a href="/case-types/pedestrian-hit-by-rideshare/" class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition">
+          <div class="text-3xl mb-3">🚶</div>
+          <h3 class="font-bold mb-2">Pedestrian Accidents</h3>
+          <p class="text-gray-600 text-sm">Struck by a rideshare driver while walking</p>
+        </a>
+        
+        <a href="/case-types/rideshare-distracted-driver/" class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition">
+          <div class="text-3xl mb-3">📱</div>
+          <h3 class="font-bold mb-2">Distracted Driving</h3>
+          <p class="text-gray-600 text-sm">Accidents caused by app distraction</p>
+        </a>
+        
+        <a href="/case-types/rideshare-wrongful-death/" class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition">
+          <div class="text-3xl mb-3">💔</div>
+          <h3 class="font-bold mb-2">Wrongful Death</h3>
+          <p class="text-gray-600 text-sm">Fatal rideshare accident claims</p>
+        </a>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/case-types/" class="text-secondary font-semibold hover:underline">
+          View all case types →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+      
+      <div class="space-y-6">
+        <details class="bg-white p-6 rounded-xl shadow group">
+          <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+            Who is liable when a rideshare driver causes an accident?
+            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Liability depends on the driver's status at the time of the accident. When a passenger is in the vehicle or the driver is en route to a pickup, the rideshare company's $1 million commercial insurance typically covers the accident. Both the driver and the rideshare company may be held liable depending on the circumstances.
+          </p>
+        </details>
+        
+        <details class="bg-white p-6 rounded-xl shadow group">
+          <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+            How much is my rideshare accident claim worth?
+            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            Settlement values vary widely based on injury severity, medical expenses, lost wages, pain and suffering, and other factors. Minor injury claims may settle for $10,000-$50,000, while serious injury cases can reach $500,000 or more. Fatal accident claims may exceed $1 million.
+          </p>
+        </details>
+        
+        <details class="bg-white p-6 rounded-xl shadow group">
+          <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+            How long do I have to file a rideshare accident lawsuit?
+            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            The statute of limitations varies by state, ranging from 1 year (Louisiana, Tennessee) to 6 years (Maine, Minnesota, North Dakota). Most states have 2-3 year limits. It's critical to act quickly to preserve evidence and meet legal deadlines.
+          </p>
+        </details>
+        
+        <details class="bg-white p-6 rounded-xl shadow group">
+          <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+            Do I need a lawyer for a rideshare accident claim?
+            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            While not required, hiring an experienced rideshare accident attorney significantly increases your chances of fair compensation. Uber's insurance company has teams of lawyers—you should too. Most rideshare accident attorneys work on contingency, meaning you pay nothing unless you win.
+          </p>
+        </details>
+        
+        <details class="bg-white p-6 rounded-xl shadow group">
+          <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
+            What if the rideshare driver was not at fault?
+            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+          </summary>
+          <p class="mt-4 text-gray-600">
+            If another driver caused the accident, you can file a claim against that driver's insurance. Additionally, if you were a rideshare passenger, the rideshare company's uninsured/underinsured motorist coverage may apply if the at-fault driver lacks adequate insurance.
+          </p>
+        </details>
+      </div>
+      
+      <div class="mt-8 text-center">
+        <a href="/faq/" class="text-secondary font-semibold hover:underline">View all FAQs →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="py-16 bg-primary text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Get Your Free Case Evaluation Today</h2>
+      <p class="text-xl text-gray-300 mb-8">
+        Don't let the rideshare company's insurance company take advantage of you. Our network of experienced rideshare accident attorneys fights for maximum compensation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/free-consultation/" class="bg-secondary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-secondary-light transition">
+          🚗 Get Free Case Review
+        </a>
+        </a>
+      </div>
+      <p class="mt-6 text-gray-400 text-sm">No fees unless you win. Available 24/7.</p>
+    </div>
+  </section>
+</BaseLayout>
