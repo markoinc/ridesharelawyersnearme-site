@@ -48,7 +48,7 @@ const schema = {
         <a href="/blog/" class="hover:text-white">Blog</a> → 
         <span class="text-white">{article.category}</span>
       </nav>
-      <span class="bg-secondary text-white px-3 py-1 rounded text-sm">{article.category}</span>
+      <span class="bg-primary text-white px-3 py-1 rounded text-sm">{article.category}</span>
       <h1 class="text-3xl md:text-4xl font-bold mt-4 mb-4">{article.title}</h1>
       <div class="flex items-center gap-4 text-gray-300">
         <span>📖 {article.readTime} read</span>
@@ -62,7 +62,7 @@ const schema = {
       <!-- Main Content -->
       <article class="lg:col-span-2 prose prose-lg max-w-none">
         <div class="bg-white p-8 rounded-xl shadow">
-          <p class="text-xl text-gray-600 mb-8 border-l-4 border-secondary pl-4">{article.description}</p>
+          <p class="text-xl text-gray-600 mb-8 border-l-4 border-primary pl-4">{article.description}</p>
           
           <h2>Understanding {article.title}</h2>
           <p>
@@ -94,10 +94,10 @@ const schema = {
             <li>Consult with an experienced rideshare accident attorney</li>
           </ol>
 
-          <div class="bg-secondary/10 p-6 rounded-xl mt-8">
+          <div class="bg-secondary-light p-6 rounded-xl mt-8">
             <h3 class="text-xl font-bold mb-2">Need Legal Help?</h3>
             <p class="mb-4">If you have questions about {article.title.toLowerCase()}, speak with an experienced Uber accident attorney today.</p>
-            <a href="/free-consultation/" class="bg-secondary text-white px-6 py-3 rounded-lg font-bold hover:bg-secondary-dark transition inline-block">
+            <a href="/free-consultation/" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition inline-block">
               Get Free Case Review →
             </a>
           </div>
@@ -121,7 +121,7 @@ const schema = {
               <ul class="space-y-3">
                 {relatedArticles.map(ra => (
                   <li>
-                    <a href={`/blog/${ra.slug}/`} class="text-secondary hover:underline text-sm">{ra.title}</a>
+                    <a href={`/blog/${ra.slug}/`} class="text-primary hover:underline text-sm">{ra.title}</a>
                   </li>
                 ))}
               </ul>
@@ -134,7 +134,7 @@ const schema = {
             <ul class="space-y-3">
               {recentArticles.map(ra => (
                 <li>
-                  <a href={`/blog/${ra.slug}/`} class="text-secondary hover:underline text-sm">{ra.title}</a>
+                  <a href={`/blog/${ra.slug}/`} class="text-primary hover:underline text-sm">{ra.title}</a>
                 </li>
               ))}
             </ul>

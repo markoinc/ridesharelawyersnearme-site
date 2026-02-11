@@ -43,7 +43,7 @@ const seoTitle = truncateTitle(resource.title);
     <div class="grid lg:grid-cols-3 gap-12">
       <article class="lg:col-span-2 prose prose-lg max-w-none">
         <div class="bg-white p-8 rounded-xl shadow">
-          <p class="text-xl text-gray-600 mb-8 border-l-4 border-secondary pl-4">{resource.description}</p>
+          <p class="text-xl text-gray-600 mb-8 border-l-4 border-primary pl-4">{resource.description}</p>
           
           <h2>Overview</h2>
           <p>
@@ -76,10 +76,10 @@ const seoTitle = truncateTitle(resource.title);
             with an experienced rideshare accident attorney is so important.
           </p>
 
-          <div class="bg-secondary/10 p-6 rounded-xl mt-8">
+          <div class="bg-secondary-light p-6 rounded-xl mt-8">
             <h3 class="text-xl font-bold mb-2">Get Personalized Guidance</h3>
             <p class="mb-4">Have questions about your specific situation? Speak with an attorney who specializes in Uber accident cases.</p>
-            <a href="/free-consultation/" class="bg-secondary text-white px-6 py-3 rounded-lg font-bold hover:bg-secondary-dark transition inline-block">
+            <a href="/free-consultation/" class="bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition inline-block">
               Get Free Case Review →
             </a>
           </div>
@@ -100,7 +100,7 @@ const seoTitle = truncateTitle(resource.title);
             <ul class="space-y-3">
               {otherResources.map(or => (
                 <li>
-                  <a href={`/resources/${or.slug}/`} class="text-secondary hover:underline text-sm">{or.title}</a>
+                  <a href={`/resources/${or.slug}/`} class="text-primary hover:underline text-sm">{or.title}</a>
                 </li>
               ))}
             </ul>

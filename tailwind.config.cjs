@@ -5,19 +5,19 @@ module.exports = {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#000000',
-          light: '#1a1a1a',
-          dark: '#000000',
+          DEFAULT: '#2563eb',  // Royal blue - main brand color
+          light: '#3b82f6',    // Lighter royal blue
+          dark: '#1d4ed8',     // Darker royal blue
         },
         secondary: {
-          DEFAULT: '#276EF1',
-          light: '#4284f5',
-          dark: '#1a5ad9',
+          DEFAULT: '#dbeafe',  // Light blue - accent/background
+          light: '#eff6ff',    // Lighter blue for subtle backgrounds
+          dark: '#bfdbfe',     // Slightly darker light blue
         },
         accent: {
-          DEFAULT: '#09091a',
-          purple: '#7B68EE',
-          green: '#06c167',
+          DEFAULT: '#1e40af',  // Deep blue for emphasis
+          green: '#059669',    // Emerald green for success/trust
+          gold: '#f59e0b',     // Amber for urgency/CTAs
         }
       },
     },

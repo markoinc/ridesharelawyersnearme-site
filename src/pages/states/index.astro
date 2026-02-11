@@ -43,10 +43,10 @@ const regions = {
     <div class="max-w-7xl mx-auto px-4">
       {Object.entries(regions).map(([region, regionStates]) => (
         <div class="mb-12">
-          <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-secondary">{region}</h2>
+          <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-primary">{region}</h2>
           <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
             {regionStates.map(state => (
-              <a href={`/states/${state.slug}/`} class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition border-l-4 border-transparent hover:border-secondary">
+              <a href={`/states/${state.slug}/`} class="bg-white p-4 rounded-lg shadow hover:shadow-lg transition border-l-4 border-transparent hover:border-primary">
                 <h3 class="font-bold text-lg">{state.name}</h3>
                 <div class="text-sm text-gray-600 mt-1">
                   <span class={state.statOfLimitations === "1 year" ? "text-red-600 font-semibold" : ""}>
@@ -81,7 +81,7 @@ const regions = {
           <ul class="space-y-2">
             {urgentStates.map(state => (
               <li>
-                <a href={`/states/${state.slug}/`} class="text-secondary hover:underline font-medium">{state.name}</a>
+                <a href={`/states/${state.slug}/`} class="text-primary hover:underline font-medium">{state.name}</a>
               </li>
             ))}
           </ul>
@@ -94,7 +94,7 @@ const regions = {
           <ul class="space-y-2">
             {cnStates.map(state => (
               <li>
-                <a href={`/states/${state.slug}/`} class="text-secondary hover:underline font-medium">{state.name}</a>
+                <a href={`/states/${state.slug}/`} class="text-primary hover:underline font-medium">{state.name}</a>
               </li>
             ))}
           </ul>
@@ -107,7 +107,7 @@ const regions = {
           <ul class="space-y-2">
             {longSOLStates.slice(0, 6).map(state => (
               <li>
-                <a href={`/states/${state.slug}/`} class="text-secondary hover:underline font-medium">{state.name} ({state.statOfLimitations})</a>
+                <a href={`/states/${state.slug}/`} class="text-primary hover:underline font-medium">{state.name} ({state.statOfLimitations})</a>
               </li>
             ))}
           </ul>
@@ -121,7 +121,7 @@ const regions = {
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Not Sure About Your State's Laws?</h2>
       <p class="text-gray-300 mb-8">Get a free case evaluation from an attorney who knows your state's rideshare laws.</p>
-      <a href="/free-consultation/" class="bg-secondary text-white px-8 py-4 rounded-lg font-bold hover:bg-secondary-light transition inline-block">
+      <a href="/free-consultation/" class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-light transition inline-block">
         Get Free Case Review
       </a>
     </div>

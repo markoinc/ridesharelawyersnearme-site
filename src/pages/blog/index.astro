@@ -23,7 +23,7 @@ const categories = getCategories();
         <h2 class="text-2xl font-bold mb-4">Browse by Category</h2>
         <div class="flex flex-wrap gap-3">
           {categories.map(cat => (
-            <a href={`#${cat.toLowerCase().replace(/\s+/g, '-')}`} class="bg-secondary text-white px-4 py-2 rounded-lg hover:bg-secondary-dark transition">
+            <a href={`#${cat.toLowerCase().replace(/\s+/g, '-')}`} class="bg-primary text-white px-4 py-2 rounded-lg hover:bg-primary-dark transition">
               {cat}
             </a>
           ))}
@@ -35,7 +35,7 @@ const categories = getCategories();
         const categoryArticles = getArticlesByCategory(category);
         return (
           <div id={category.toLowerCase().replace(/\s+/g, '-')} class="mb-12">
-            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-secondary">{category}</h2>
+            <h2 class="text-2xl font-bold mb-6 pb-2 border-b-2 border-primary">{category}</h2>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {categoryArticles.map(article => (
                 <a href={`/blog/${article.slug}/`} class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
@@ -60,7 +60,7 @@ const categories = getCategories();
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl font-bold mb-4">Have Questions About Your Accident?</h2>
       <p class="text-gray-300 mb-8">Get personalized answers from an experienced Uber accident attorney.</p>
-      <a href="/free-consultation/" class="bg-secondary text-white px-8 py-4 rounded-lg font-bold hover:bg-secondary-light transition inline-block">
+      <a href="/free-consultation/" class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-light transition inline-block">
         Get Free Case Review
       </a>
     </div>

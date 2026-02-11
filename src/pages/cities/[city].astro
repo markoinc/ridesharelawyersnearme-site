@@ -89,7 +89,7 @@ const schema = {
             {city.uberMarketRank && (
               <div class="bg-gray-50 p-4 rounded-lg">
                 <h3 class="font-semibold text-gray-700">Uber Market Rank</h3>
-                <p class="text-2xl font-bold text-secondary">#{city.uberMarketRank}</p>
+                <p class="text-2xl font-bold text-primary">#{city.uberMarketRank}</p>
               </div>
             )}
             {city.annualRideshareTrips && (
@@ -114,7 +114,7 @@ const schema = {
             <p class="text-gray-600 mb-4">Areas in {city.name} with the highest concentration of Uber/Lyft activity:</p>
             <div class="flex flex-wrap gap-2">
               {city.busyAreas.map(area => (
-                <span class="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm">{area}</span>
+                <span class="bg-secondary-light text-primary px-3 py-1 rounded-full text-sm">{area}</span>
               ))}
             </div>
           </div>
@@ -159,7 +159,7 @@ const schema = {
             <ul class="space-y-3">
               {city.uniqueFactors.map(factor => (
                 <li class="flex items-start gap-3">
-                  <span class="text-secondary text-xl">→</span>
+                  <span class="text-primary text-xl">→</span>
                   <span>{factor}</span>
                 </li>
               ))}
@@ -174,7 +174,7 @@ const schema = {
             <div class="grid md:grid-cols-2 gap-4">
               <div>
                 <h3 class="font-semibold text-gray-700">Statute of Limitations</h3>
-                <p class="text-lg font-bold text-secondary">{state.statOfLimitations}</p>
+                <p class="text-lg font-bold text-primary">{state.statOfLimitations}</p>
               </div>
               <div>
                 <h3 class="font-semibold text-gray-700">Fault System</h3>
@@ -182,7 +182,7 @@ const schema = {
               </div>
             </div>
             <div class="mt-4">
-              <a href={`/states/${city.stateSlug}/`} class="text-secondary hover:underline font-medium">
+              <a href={`/states/${city.stateSlug}/`} class="text-primary hover:underline font-medium">
                 View all {city.state} rideshare laws →
               </a>
             </div>

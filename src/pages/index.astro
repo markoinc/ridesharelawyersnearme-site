@@ -33,7 +33,7 @@ const schema = {
       <div class="grid lg:grid-cols-2 gap-12 items-center">
         <div>
           <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-            Injured in a <span class="text-secondary">Rideshare Accident</span>?
+            Injured in a <span class="text-secondary-light">Rideshare Accident</span>?
           </h1>
           <p class="text-xl md:text-2xl text-gray-300 mb-8">
             Get the compensation you deserve. Connect with experienced rideshare accident attorneys who fight for victims like you.
@@ -61,23 +61,23 @@ const schema = {
   </section>
 
   <!-- Stats Section -->
-  <section class="py-12 bg-gray-100">
+  <section class="py-12 bg-secondary">
     <div class="max-w-7xl mx-auto px-4">
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         <div class="bg-white p-6 rounded-xl shadow">
-          <div class="text-4xl font-bold text-secondary mb-2">12B+</div>
+          <div class="text-4xl font-bold text-primary mb-2">12B+</div>
           <div class="text-gray-600">Rideshare Trips Annually (Uber + Lyft)</div>
         </div>
         <div class="bg-white p-6 rounded-xl shadow">
-          <div class="text-4xl font-bold text-secondary mb-2">$1M</div>
+          <div class="text-4xl font-bold text-primary mb-2">$1M</div>
           <div class="text-gray-600">Insurance Coverage (During Trip)</div>
         </div>
         <div class="bg-white p-6 rounded-xl shadow">
-          <div class="text-4xl font-bold text-secondary mb-2">97%</div>
+          <div class="text-4xl font-bold text-primary mb-2">97%</div>
           <div class="text-gray-600">Cases Settled Out of Court</div>
         </div>
         <div class="bg-white p-6 rounded-xl shadow">
-          <div class="text-4xl font-bold text-secondary mb-2">150+</div>
+          <div class="text-4xl font-bold text-primary mb-2">150+</div>
           <div class="text-gray-600">Cities We Cover</div>
         </div>
       </div>
@@ -102,10 +102,10 @@ const schema = {
           </p>
         </div>
         
-        <div class="bg-gray-50 p-8 rounded-xl border-t-4 border-secondary">
+        <div class="bg-gray-50 p-8 rounded-xl border-t-4 border-primary">
           <div class="text-5xl mb-4">🚗</div>
           <h3 class="text-xl font-bold mb-2">Period 2: En Route to Pickup</h3>
-          <div class="text-3xl font-bold text-secondary mb-4">$1M</div>
+          <div class="text-3xl font-bold text-primary mb-4">$1M</div>
           <p class="text-gray-600">
             Driver accepted a ride and is heading to pick up the passenger. Full $1 million liability coverage kicks in.
           </p>
@@ -122,7 +122,7 @@ const schema = {
       </div>
       
       <div class="mt-12 text-center">
-        <a href="/resources/rideshare-insurance-coverage/" class="text-secondary font-semibold hover:underline">
+        <a href="/resources/rideshare-insurance-coverage/" class="text-primary font-semibold hover:underline">
           Learn more about rideshare insurance coverage →
         </a>
       </div>
@@ -197,7 +197,7 @@ const schema = {
       </div>
       
       <div class="mt-8 text-center">
-        <a href="/resources/statute-of-limitations/" class="text-secondary font-semibold hover:underline">
+        <a href="/resources/statute-of-limitations/" class="text-primary font-semibold hover:underline">
           View all state deadlines →
         </a>
       </div>
@@ -212,7 +212,7 @@ const schema = {
       
       <div class="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
         {topMarkets.map(city => (
-          <a href={`/cities/${city.slug}/`} class="bg-gray-50 p-4 rounded-xl hover:bg-secondary hover:text-white transition group">
+          <a href={`/cities/${city.slug}/`} class="bg-secondary-light p-4 rounded-xl hover:bg-primary hover:text-white transition group">
             <h3 class="font-bold">{city.name}</h3>
             <p class="text-sm text-gray-500 group-hover:text-white/80">{city.stateAbbr}</p>
           </a>
@@ -220,7 +220,7 @@ const schema = {
       </div>
       
       <div class="mt-8 text-center">
-        <a href="/cities/" class="bg-secondary text-white px-8 py-3 rounded-lg font-semibold hover:bg-secondary-dark transition inline-block">
+        <a href="/cities/" class="bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition inline-block">
           View All Cities →
         </a>
       </div>
@@ -234,14 +234,14 @@ const schema = {
       
       <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-3">
         {states.map(state => (
-          <a href={`/states/${state.slug}/`} class="bg-white p-3 rounded-lg shadow hover:shadow-md hover:bg-secondary hover:text-white transition text-center">
+          <a href={`/states/${state.slug}/`} class="bg-white p-3 rounded-lg shadow hover:shadow-md hover:bg-primary hover:text-white transition text-center">
             <span class="font-medium">{state.abbr}</span>
           </a>
         ))}
       </div>
       
       <div class="mt-8 text-center">
-        <a href="/states/" class="text-secondary font-semibold hover:underline">
+        <a href="/states/" class="text-primary font-semibold hover:underline">
           Browse all states with detailed laws →
         </a>
       </div>
@@ -281,7 +281,7 @@ const schema = {
       </div>
       
       <div class="mt-8 text-center">
-        <a href="/case-types/" class="text-secondary font-semibold hover:underline">
+        <a href="/case-types/" class="text-primary font-semibold hover:underline">
           View all case types →
         </a>
       </div>
@@ -297,7 +297,7 @@ const schema = {
         <details class="bg-white p-6 rounded-xl shadow group">
           <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
             Who is liable when a rideshare driver causes an accident?
-            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+            <span class="text-primary group-open:rotate-180 transition">▼</span>
           </summary>
           <p class="mt-4 text-gray-600">
             Liability depends on the driver's status at the time of the accident. When a passenger is in the vehicle or the driver is en route to a pickup, the rideshare company's $1 million commercial insurance typically covers the accident. Both the driver and the rideshare company may be held liable depending on the circumstances.
@@ -307,7 +307,7 @@ const schema = {
         <details class="bg-white p-6 rounded-xl shadow group">
           <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
             How much is my rideshare accident claim worth?
-            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+            <span class="text-primary group-open:rotate-180 transition">▼</span>
           </summary>
           <p class="mt-4 text-gray-600">
             Settlement values vary widely based on injury severity, medical expenses, lost wages, pain and suffering, and other factors. Minor injury claims may settle for $10,000-$50,000, while serious injury cases can reach $500,000 or more. Fatal accident claims may exceed $1 million.
@@ -317,7 +317,7 @@ const schema = {
         <details class="bg-white p-6 rounded-xl shadow group">
           <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
             How long do I have to file a rideshare accident lawsuit?
-            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+            <span class="text-primary group-open:rotate-180 transition">▼</span>
           </summary>
           <p class="mt-4 text-gray-600">
             The statute of limitations varies by state, ranging from 1 year (Louisiana, Tennessee) to 6 years (Maine, Minnesota, North Dakota). Most states have 2-3 year limits. It's critical to act quickly to preserve evidence and meet legal deadlines.
@@ -327,7 +327,7 @@ const schema = {
         <details class="bg-white p-6 rounded-xl shadow group">
           <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
             Do I need a lawyer for a rideshare accident claim?
-            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+            <span class="text-primary group-open:rotate-180 transition">▼</span>
           </summary>
           <p class="mt-4 text-gray-600">
             While not required, hiring an experienced rideshare accident attorney significantly increases your chances of fair compensation. Uber's insurance company has teams of lawyers—you should too. Most rideshare accident attorneys work on contingency, meaning you pay nothing unless you win.
@@ -337,7 +337,7 @@ const schema = {
         <details class="bg-white p-6 rounded-xl shadow group">
           <summary class="font-bold text-lg cursor-pointer list-none flex justify-between items-center">
             What if the rideshare driver was not at fault?
-            <span class="text-secondary group-open:rotate-180 transition">▼</span>
+            <span class="text-primary group-open:rotate-180 transition">▼</span>
           </summary>
           <p class="mt-4 text-gray-600">
             If another driver caused the accident, you can file a claim against that driver's insurance. Additionally, if you were a rideshare passenger, the rideshare company's uninsured/underinsured motorist coverage may apply if the at-fault driver lacks adequate insurance.
@@ -346,7 +346,7 @@ const schema = {
       </div>
       
       <div class="mt-8 text-center">
-        <a href="/faq/" class="text-secondary font-semibold hover:underline">View all FAQs →</a>
+        <a href="/faq/" class="text-primary font-semibold hover:underline">View all FAQs →</a>
       </div>
     </div>
   </section>
@@ -355,16 +355,15 @@ const schema = {
   <section class="py-16 bg-primary text-white">
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h2 class="text-3xl md:text-4xl font-bold mb-6">Get Your Free Case Evaluation Today</h2>
-      <p class="text-xl text-gray-300 mb-8">
+      <p class="text-xl text-blue-200 mb-8">
         Don't let the rideshare company's insurance company take advantage of you. Our network of experienced rideshare accident attorneys fights for maximum compensation.
       </p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/free-consultation/" class="bg-secondary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-secondary-light transition">
+        <a href="/free-consultation/" class="bg-accent-gold text-gray-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition">
           🚗 Get Free Case Review
         </a>
-        </a>
       </div>
-      <p class="mt-6 text-gray-400 text-sm">No fees unless you win. Available 24/7.</p>
+      <p class="mt-6 text-blue-300 text-sm">No fees unless you win. Available 24/7.</p>
     </div>
   </section>
 </BaseLayout>

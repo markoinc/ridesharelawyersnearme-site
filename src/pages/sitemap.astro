@@ -18,7 +18,7 @@ import { resources } from '../data/resources';
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Main Pages -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Main Pages</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Main Pages</h2>
           <ul class="space-y-2">
             <li><a href="/" class="text-primary hover:underline">Home</a></li>
             <li><a href="/about/" class="text-primary hover:underline">About Us</a></li>
@@ -30,7 +30,7 @@ import { resources } from '../data/resources';
 
         <!-- Legal Pages -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Legal</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Legal</h2>
           <ul class="space-y-2">
             <li><a href="/privacy-policy/" class="text-primary hover:underline">Privacy Policy</a></li>
             <li><a href="/terms-of-service/" class="text-primary hover:underline">Terms of Service</a></li>
@@ -40,48 +40,48 @@ import { resources } from '../data/resources';
 
         <!-- Case Types -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Case Types</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Case Types</h2>
           <ul class="space-y-2">
             {caseTypes.slice(0, 10).map(type => (
               <li><a href={`/case-types/${type.slug}/`} class="text-primary hover:underline">{type.name}</a></li>
             ))}
             {caseTypes.length > 10 && (
-              <li><a href="/case-types/" class="text-secondary font-semibold hover:underline">View all {caseTypes.length} case types →</a></li>
+              <li><a href="/case-types/" class="text-primary font-semibold hover:underline">View all {caseTypes.length} case types →</a></li>
             )}
           </ul>
         </div>
 
         <!-- Resources -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Resources</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Resources</h2>
           <ul class="space-y-2">
             {resources.slice(0, 10).map(resource => (
               <li><a href={`/resources/${resource.slug}/`} class="text-primary hover:underline">{resource.title}</a></li>
             ))}
             {resources.length > 10 && (
-              <li><a href="/resources/" class="text-secondary font-semibold hover:underline">View all {resources.length} resources →</a></li>
+              <li><a href="/resources/" class="text-primary font-semibold hover:underline">View all {resources.length} resources →</a></li>
             )}
           </ul>
         </div>
 
         <!-- Blog -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Blog Articles</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Blog Articles</h2>
           <ul class="space-y-2">
             {articles.slice(0, 10).map(article => (
               <li><a href={`/blog/${article.slug}/`} class="text-primary hover:underline">{article.title}</a></li>
             ))}
             {articles.length > 10 && (
-              <li><a href="/blog/" class="text-secondary font-semibold hover:underline">View all {articles.length} articles →</a></li>
+              <li><a href="/blog/" class="text-primary font-semibold hover:underline">View all {articles.length} articles →</a></li>
             )}
           </ul>
         </div>
 
         <!-- States Overview -->
         <div class="bg-white rounded-xl shadow-md p-6">
-          <h2 class="text-xl font-bold mb-4 text-secondary">Browse by State</h2>
+          <h2 class="text-xl font-bold mb-4 text-primary">Browse by State</h2>
           <p class="text-gray-600 mb-3">Find rideshare accident lawyers in all 50 states + DC</p>
-          <a href="/states/" class="text-secondary font-semibold hover:underline">View all {states.length} states →</a>
+          <a href="/states/" class="text-primary font-semibold hover:underline">View all {states.length} states →</a>
         </div>
       </div>
 
@@ -108,7 +108,7 @@ import { resources } from '../data/resources';
           </div>
           {cities.length > 48 && (
             <div class="mt-4 text-center">
-              <a href="/cities/" class="text-secondary font-semibold hover:underline">View all {cities.length} cities →</a>
+              <a href="/cities/" class="text-primary font-semibold hover:underline">View all {cities.length} cities →</a>
             </div>
           )}
         </div>

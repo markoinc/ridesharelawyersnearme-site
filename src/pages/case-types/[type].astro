@@ -34,7 +34,7 @@ const otherCaseTypes = caseTypes.filter(ct => ct.slug !== caseType.slug).slice(0
     <div class="grid lg:grid-cols-3 gap-12">
       <div class="lg:col-span-2 space-y-8">
         <!-- Settlement Range -->
-        <div class="bg-secondary/10 p-6 rounded-xl">
+        <div class="bg-secondary-light p-6 rounded-xl">
           <h2 class="text-xl font-bold mb-2">Typical Settlement Range</h2>
           <p class="text-3xl font-bold text-secondary">{caseType.averageSettlement}</p>
           <p class="text-gray-600 text-sm mt-2">Actual values depend on injury severity, evidence, and other factors.</p>
@@ -80,7 +80,7 @@ const otherCaseTypes = caseTypes.filter(ct => ct.slug !== caseType.slug).slice(0
         <div class="bg-primary text-white p-8 rounded-xl">
           <h2 class="text-2xl font-bold mb-4">Were You Involved in This Type of Accident?</h2>
           <p class="text-gray-300 mb-6">Our attorneys have experience with {caseType.shortTitle.toLowerCase()} cases and can help you understand your options.</p>
-          <a href="/free-consultation/" class="bg-secondary text-white px-8 py-4 rounded-lg font-bold hover:bg-secondary-light transition inline-block">
+          <a href="/free-consultation/" class="bg-primary text-white px-8 py-4 rounded-lg font-bold hover:bg-primary-light transition inline-block">
             Get Free Case Review
           </a>
         </div>
@@ -99,7 +99,7 @@ const otherCaseTypes = caseTypes.filter(ct => ct.slug !== caseType.slug).slice(0
             <ul class="space-y-3">
               {otherCaseTypes.map(oct => (
                 <li>
-                  <a href={`/case-types/${oct.slug}/`} class="text-secondary hover:underline text-sm">{oct.shortTitle}</a>
+                  <a href={`/case-types/${oct.slug}/`} class="text-primary hover:underline text-sm">{oct.shortTitle}</a>
                 </li>
               ))}
             </ul>
